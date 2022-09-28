@@ -1,0 +1,720 @@
+/*=====Google Font : Poppins====== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+
+/*========== Variables ======== */
+:root {
+    --darkpink: #2c021e;
+    --lightpink: #E80F88;
+    --black: #000000;
+    --white: #ffffff;
+    --betweenPink: #790252;
+    --gradient: linear-gradient(to right bottom, var(--lightpink), var(--black));
+
+}
+
+/* ========= Global ===========*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    background-color: var(--darkpink);
+    font-size: 10px;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 500;
+    color: var(--white);
+}
+
+p {
+    color: var(--white);
+}
+
+/* ================  Reusable Css ============ */
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+span {
+    color: var(--lightpink);
+}
+
+/* =============Navbars=================== */
+
+header,
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#navbar {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+nav .logo h1 {
+    font-size: 5.5rem;
+    margin-top: 5px;
+    color: var(--white);
+
+}
+
+
+
+nav .nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.toggle {
+    display: none;
+    color: var(--white);
+    font-size: 2rem;
+    z-index: 99;
+}
+
+nav .nav-list .nav-list-tag {
+    margin: 0 1.5rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+nav .nav-list-tag .nav-link {
+    color: var(--white);
+    font-weight: 700;
+}
+
+nav .nav-list-tag .nav-link:hover {
+    color: var(--lightpink);
+    border: 2px solid var(--lightpink);
+    border-radius: 1rem;
+    padding: 5px 1rem;
+}
+
+/* nav mobile view */
+@media only screen and (max-width:750px) {
+    .toggle {
+        display: block;
+        margin-right: 20px;
+        margin-top: 20px;
+    }
+
+    .logo {
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: var(--darkpink);
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+        margin-top: -900px;
+        transition: margin 0.5s ease-in-out;
+    }
+
+    .nav-list.active {
+        margin-top: 0;
+    }
+
+}
+
+/* ========Navbar Ending===================== */
+
+/* ====HERO SECTION */
+.hero {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+}
+
+.hero h4 {
+    margin-top: 3rem;
+    font-size: 1.8rem;
+    color: var(--white);
+    font-weight: 100;
+    text-align: center;
+}
+
+.hero h2 {
+    margin-top: 1rem;
+    font-size: 4rem;
+    color: var(--white);
+    font-weight: 500;
+    text-align: center;
+}
+
+.hero .hero-clicks {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 75%;
+    /* border: 1px solid green; */
+    margin: 30px auto;
+    height: 80%;
+}
+
+.resume {
+    width: 100%;
+    padding-top: 2rem;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.resume:last-child {
+    padding-top: 40px;
+}
+
+.hero .hero-clicks .div-img {
+    background-color: var(--darkpink);
+    border: 3px solid var(--lightpink);
+    width: 80%;
+    height: 600px;
+    margin-left: 20%;
+    border-radius: 50% 50% 0 0;
+    /* margin-top: 5%; */
+    box-shadow: 8px -8px 4px 4px var(--betweenPink);
+
+}
+
+.hero .hero-clicks .div-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: fit;
+}
+
+.hero .hero-clicks .div-img:hover {
+    transform: scale(1.1);
+}
+
+
+.hero .hero-clicks .social-btns-list {
+    width: 30%;
+    text-align: center;
+    text-align: center;
+    padding-top: 5rem;
+    /* background-color: red; */
+}
+
+.button {
+    padding: 12px 4rem;
+    font-size: 1.2rem;
+    color: var(--white);
+    background-color: var(--betweenPink);
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 2rem;
+    margin-bottom: 2rem;
+}
+
+.button:hover {
+    border: 1px solid var(--lightpink);
+    color: var(--lightpink);
+    background-color: var(--darkpink);
+    transform: scale(1.2);
+}
+
+
+.social-btns-list .fa {
+
+    font-size: 3.5rem;
+    margin: 1.5rem 0;
+    color: var(--betweenPink);
+
+}
+
+.social-btns-list .fa:hover {
+    border: 1px solid var(--lightpink);
+    color: var(--lightpink);
+    background-color: var(--darkpink);
+    transform: scale(1.2);
+    border-radius: .5rem 0 .5rem 0;
+    padding: 2px;
+
+}
+
+/* ===Mobile view for hero section */
+@media only screen and (max-width: 850px) {
+    .hero {
+        height: 100%;
+    }
+
+    .hero h4 {
+        margin-top: 1rem;
+        font-size: 1.2rem;
+
+    }
+
+    .hero h2 {
+        margin-top: 1rem;
+        font-size: 1.6rem;
+        word-wrap: break-word;
+
+    }
+
+    .hero .hero-clicks {
+        flex-direction: column;
+        align-items: center;
+        justify-self: center
+    }
+
+    .resume {
+        flex-direction: column;
+    }
+
+    .button {
+        padding: 10px 4rem;
+        font-size: 1.5rem;
+        margin: 15px auto;
+    }
+
+    .hero .hero-clicks .div-img {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        box-shadow: 6px -6px 2px 2px var(--betweenPink);
+
+    }
+
+    .social-btns-list {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        /* margin-top: -50%; */
+    }
+
+    .social-btns-list .fa {
+        font-size: 2.5rem;
+        margin: 0 2rem;
+        color: var(--betweenPink);
+
+
+    }
+}
+
+/* =====About Section ============ */
+.about {
+    margin: 10% auto;
+    /* margin-top: 10%; */
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    min-width: 80%;
+}
+
+.about-card {
+    width: 100%;
+    height: 100%;
+
+}
+
+.about-title {
+    text-align: center;
+
+}
+
+.about-title h4 {
+    font-size: 14px;
+}
+
+.about-title h2 {
+    font-size: 3rem;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 100%;
+    margin-top: 5%;
+
+}
+
+.img-holder {
+    width: 100%;
+    height: 90%;
+
+}
+
+
+.about-image {
+    width: 50%;
+    height: 60%;
+    background-color: var(--lightpink);
+    transform: rotate(45deg);
+    border: 1px solid var(--betweenPink);
+    border-radius: 10px;
+    margin: 70px auto;
+    min-width: 50%;
+    min-height: 60%;
+
+
+}
+
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    transform: rotate(330deg);
+    background-color: var(--betweenPink);
+    border: 6px solid var(--lightpink);
+    border-radius: 10px;
+    object-fit: cover;
+
+}
+
+
+
+.about-image:hover {
+    transform: scale(1.3);
+    transform: rotate(0deg);
+    /* width: 70%;
+    height: 51%; */
+    box-shadow: 15px 4px -15px -12px var(--betweenPink);
+}
+
+.about-image img:hover {
+    transform: scale(1.3);
+    transform: rotate(0deg);
+    /* width: -65%;
+    height: -50%; */
+    box-shadow: 15px 4px 4px 2px var(--betweenPink);
+
+}
+
+
+
+.about-items {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.item-cards {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0 auto;
+
+
+}
+
+.others {
+    width: 80%;
+    height: 150%;
+    margin-left: 15px;
+
+}
+
+.card {
+    background-color: var(--betweenPink);
+    color: var(--white);
+    padding: 2rem;
+    border-radius: 5px;
+    text-align: center;
+    height: auto;
+    width: 30%;
+    height: 100%;
+    max-width: 30%;
+    max-height: 100%;
+
+}
+
+.card:hover {
+    background: var(--gradient);
+    box-shadow: 3px 5px 2px 2px var(--lightpink);
+    border: 1px solid var(--black);
+    transform: scale(1.1);
+    margin: 0 7px;
+}
+
+.card .fa {
+    font-size: 1rem;
+}
+
+.card h3 {
+    padding: 7%;
+    font-size: 15px;
+}
+
+.card h5 {
+    font-size: 12px;
+}
+
+.others .statment {
+    text-align: justify;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    margin-top: 2.5rem;
+}
+
+.others .button {
+
+    margin: 0 auto;
+    margin-top: 40px;
+    padding: 1rem 6rem;
+    font-size: 1.8rem;
+}
+
+@media only screen and (max-width:850px) {
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 50%;
+        height: 100%;
+        min-width: 50%;
+        min-height: 100%;
+        margin: 0 auto;
+    }
+
+    .item-cards {
+        flex-direction: column;
+
+    }
+
+    .card {
+        margin: 10px auto;
+    }
+
+    .others {
+        margin: 10px auto;
+    }
+
+
+
+    .others .button {
+
+        margin: 0 auto;
+        margin-top: 40px;
+    }
+
+}
+
+
+/* skill css */
+
+.skills {
+    width: 100%;
+    height: 100%;
+
+}
+
+.skills .skill-title {
+    text-align: center;
+}
+
+
+.skill-title h4 {
+    font-size: 14px;
+}
+
+.skill-title h2 {
+    font-size: 3rem;
+}
+
+.skills .skills-card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+
+}
+
+.skills .skills-card .skill-canva {
+    width: 50%;
+    height: 100%;
+    min-width: 50%;
+    min-height: 100%;
+    background-color: var(--betweenPink);
+    margin: 20px 15px;
+    border-radius: 10px;
+
+
+}
+
+.skill-canva h1 {
+    margin: 0 55px;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 1rem;
+    color: var(--lightpink);
+    font-weight: 900;
+    background-color: var(--darkpink);
+    border: 1px solid var(--lightpink);
+    border-radius: 20px;
+    /* word-wrap: break-word; */
+}
+
+.skill-card-canva {
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+}
+
+.skill-canva .skill-items {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin: 0 50px;
+    padding: 12px;
+
+}
+
+.skill-canva .skill-items .fa {
+    margin-right: 20px;
+    font-size: 1.3rem;
+    color: var(--lightpink);
+}
+
+.skill-canva .skill-items .item {
+    font-size: 1.1rem;
+    font-weight: 200;
+
+}
+
+.skill-canva .skill-items .item h4 {
+    font-style: italic;
+    color: var(--black);
+    font-weight: 500;
+}
+
+@media only screen and (max-width:850px) {
+    .skills .skills-card {
+        flex-direction: column;
+
+    }
+
+    .skills .skills-card .skill-canva {
+        width: 100%;
+        min-width: 50%;
+    }
+
+    .skill-canva h1 {
+        font-size: 1rem;
+
+
+    }
+
+
+}
+
+/* portfolio */
+.portfolio {
+    width: 100%;
+    height: 100%;
+    margin: 10% auto;
+}
+
+.portfolio .skill-title {
+    text-align: center;
+}
+
+.portfolio-cards {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+
+}
+
+.portfolio-card {
+    background-color: var(--betweenPink);
+    border-radius: 20px;
+    padding-bottom: 45%;
+}
+
+.portfolio-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    padding: 5%;
+
+}
+
+.portfolio-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+
+}
+
+.portfolio-title {
+    text-align: center;
+    font-size: 10px;
+}
+
+.portfolio-btns {
+    /* display: flex;
+    align-items: center;
+    justify-content: space-around; */
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.portfolio-btns a:nth-child(1) {
+    padding: 6px 3rem;
+    background-color: var(--lightpink);
+    font-size: 1rem;
+    text-align: center;
+}
+
+.portfolio-btns a:last-child {
+    padding: 6px 3rem;
+    border: 1px solid var(--white);
+    font-size: 1rem;
+    text-align: center;
+}
+
+.portfolio-btns a:hover {
+    background-color: var(--betweenPink);
+    color: var(--white);
+}
